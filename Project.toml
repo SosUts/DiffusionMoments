@@ -1,0 +1,13 @@
+name = "DiffusionMoments"
+uuid = "241a5347-e184-4f02-9eba-4187e55ac6d9"
+authors = ["Sosuke Utsunomiya <uts.199.ubosou@gmail.com>"]
+version = "0.1.0"
+
+[compat]
+julia = "1.5"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
