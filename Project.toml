@@ -4,9 +4,7 @@ authors = ["Sosuke Utsunomiya <uts.199.ubosou@gmail.com>"]
 version = "0.1.0"
 
 [deps]
-ArgCheck = "dce04be8-c92d-5529-be00-80e4d2c0e197"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
-Glob = "c27321d9-0574-5035-807b-f59d2c89b15c"
 LsqFit = "2fda8390-95c7-5789-9bda-21331edee243"
 Query = "1a8c2f83-1ff3-5112-b086-8aa67b057ba1"
 

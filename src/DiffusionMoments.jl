@@ -10,15 +10,16 @@ using Query
 # exportしたい関数一覧
 export
     # msd.jl
-    time_average,
-    ensemble_average,
+    ensemble_time_average_msd,
+    time_average_msd,
     ensemble_msd,
-    msd,
+    ensemble_tamsd
     # mme.jl
     mme,
-    moment
-# fit.jl
-fit, estimate_α
+    moment,
+    # fit.jl
+    fit,
+    estimate_α
 
 include("msd.jl")
 include("mme.jl")
