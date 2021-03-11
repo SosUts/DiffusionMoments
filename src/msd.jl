@@ -1,4 +1,3 @@
-
 """
     mean_square_disaplcement(df; method=[:ensemble_average, time_average], non_averaged::Bool) -> DataFrame, [DataFrame]
 
@@ -67,7 +66,17 @@ function ensemble_tamsd(df::DataFrame)
     )
     @inbounds Threads.@threads for i = 1:maximum(df.delta_t)
         data = df[df.delta_t.==i, :]
-        push!(eatamsd, [i, mean(data.msd), sum(data.n), std(data.msd), sem(data.msd), 1.96*sem(data.msd)])
+        push!(
+            eatamsd,
+            [
+                i,
+                mean(data.msd),
+                sum(data.n),
+                std(data.msd),
+                sem(data.msd),
+                1.96 * sem(data.msd),
+            ],
+        )
     end
     eatamsd
 end

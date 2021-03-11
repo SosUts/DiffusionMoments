@@ -1,11 +1,14 @@
 module DiffusionMoments
 
+using ArgCheck
 using DataFrames
 using LsqFit
-using Threads
 using Query
+using StatsBase
+using Statistics
+using DataFramesMeta
 
-# import Random: AbstractRNG, GLOBAL_RNG
+# import Query: @where
 
 # exportしたい関数一覧
 export
@@ -13,7 +16,7 @@ export
     ensemble_time_average_msd,
     time_average_msd,
     ensemble_msd,
-    ensemble_tamsd
+    ensemble_tamsd,
     # mme.jl
     mme,
     moment,
@@ -24,5 +27,6 @@ export
 include("msd.jl")
 include("mme.jl")
 include("fit.jl")
+include("utilities.jl")
 
 end
