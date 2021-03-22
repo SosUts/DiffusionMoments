@@ -31,9 +31,9 @@ end
 
 function StatsBase.moment(
     df::DataFrame,
-    id::Symbol = :TrackID,
-    x::Symbol = :POSITION_X,
-    y::Symbol = :POSITION_Y,
+    idlabel::Symbol = :TrackID,
+    xlabel::Symbol = :POSITION_X,
+    ylabel::Symbol = :POSITION_Y,
 )
     result = DataFrame(
         TrackID = Int64[],
@@ -42,8 +42,8 @@ function StatsBase.moment(
         delta_t = Int64[],
         n = Int64[],
     )
-    @inbounds for n in sort(collect(Set(df[!, id])))
-        m = extract(df, n, id, [x, y])
+    @inbounds for n in sort(collect(Set(df[!, idlabel])))
+        m = extract(df, n, id, [xlabel, ylabel])
         T = size(m, 1)
         for δ = 1:T-1
             c⁴ = 0.0
