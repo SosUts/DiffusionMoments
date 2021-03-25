@@ -15,4 +15,5 @@ end
 
 function extract(df::DataFrame, n::Int, id::Symbol, label::Vector{Symbol})
     Matrix(@where(df, cols(id) .== n)[!, label])
+    # df[df[!, id] .== n, label]
 end

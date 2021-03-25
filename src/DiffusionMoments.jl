@@ -25,6 +25,7 @@ export
     estimate_α
 
 include("msd.jl")
+include("_msd.jl")
 include("mme.jl")
 include("fit.jl")
 include("utilities.jl")
