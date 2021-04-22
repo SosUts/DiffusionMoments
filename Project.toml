@@ -14,6 +14,7 @@ StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 spt = "03056a08-30ab-443b-bffd-0dadcb0920f7"
 
 [compat]
+DataFrames = "1.0"
 julia = "1.5"
 
 [extras]
